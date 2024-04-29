@@ -10,7 +10,7 @@ export class Usuario{
 
     @IsNotEmpty()
     @Column({length: 255, nullable: false})
-    public name: string
+    public nome: string
 
     @IsEmail()
     @IsNotEmpty()
@@ -27,7 +27,6 @@ export class Usuario{
 
     @OneToMany(() => Postagem, (postagem) => postagem.usuario)
     postagem: Postagem[]
-    nome: any;
 
 
 }
